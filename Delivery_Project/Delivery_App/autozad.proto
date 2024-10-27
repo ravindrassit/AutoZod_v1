@@ -1,0 +1,97 @@
+syntax = "proto3";
+
+package autozad;
+
+service AutoZad_Service {
+  rpc GetItem (ItemRequest) returns (ItemResponse);
+}
+
+message ItemRequest {
+  string request_data = 1;
+}
+
+message ItemResponse {
+  string response_data = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+syntax = "proto3";
+
+package autozad_service;
+
+service autozad_service {
+  rpc GetItem (ItemRequest) returns (ItemResponse);
+}
+
+message ItemRequest {
+  //int32 id = 1;
+}
+
+message ItemResponse {
+  string order_id = 1;
+  string merchant_name = 2;
+  string deliver_name = 3;
+  string partnerId = 4;
+}
+*/
+
+
+/*
+// myservice.proto
+syntax = "proto3";
+
+service MyService {
+  rpc GetItem (ItemRequest) returns (ItemResponse);
+}
+
+message ItemRequest {
+  string id = 1;
+}
+
+message ItemResponse {
+  string name = 1;
+}
+*/
+
+
+/*
+
+syntax = "proto3";
+
+package example;
+
+service ExampleService {
+    rpc SendOrderStatus(OrderStatusRequest) returns (OrderStatusResponse);
+}
+
+message OrderStatusRequest {
+    repeated OrderStatus orders = 1;
+}
+
+message OrderStatus {
+    string order_id = 1;
+    string merchant_name = 2;
+    string deliver_name = 3;
+    string partnerId = 4;
+}
+
+message OrderStatusResponse {
+    string response_message = 1;
+}
+
+*/

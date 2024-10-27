@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  autozod-service:
+    image: autozod_image:v1
+    build: .
+    container_name: autozod_cont
+    ports:
+      - "8080:8000"
+    environment:
+      appcredsJson: "/app/appcreds_json.json"
+    volumes:
+      - "C:/Zaperr/BE/appcreds_json.json:/app/appcreds_json.json"

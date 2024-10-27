@@ -1,0 +1,24 @@
+version: '2.2'
+
+services:
+  delivery:
+    image: deliver_image:v1
+    build: .
+    container_name: delivery_cont1
+    ports:
+      - "8080:8000"
+    environment:
+      appcredsJson: "/app/appcreds_json.json"
+    volumes:
+      - "C:/Zaperr/BE/appcreds_json.json:/app/appcreds_json.json"
+
+
+#    networks:
+#      - auto_zad_network
+
+#networks:
+#  auto_zad_network:
+#    driver: bridge
+#
+#volumes:
+#  auto_zad_volume:

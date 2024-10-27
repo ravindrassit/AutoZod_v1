@@ -1,0 +1,12 @@
+version: '2.2'
+
+services:
+  delivery:
+    image: deliver_image:v1
+    build: .
+    container_name: delivery_cont1
+    ports:
+#      - "8080:8000"
+      - "9000:8000"
+    env_file:
+      - .env
